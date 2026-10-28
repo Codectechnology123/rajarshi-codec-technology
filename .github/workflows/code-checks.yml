@@ -20,6 +20,8 @@ jobs:
       - name: Install backend packages
         working-directory: backend
         run: npm install
-      - name: Check JavaScript syntax
+      - name: Check backend JavaScript syntax
         working-directory: backend
         run: npm run check
+      - name: Check frontend JavaScript syntax
+        run: node --check frontend/js/app.js
