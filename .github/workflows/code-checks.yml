@@ -1,0 +1,25 @@
+name: Portfolio code checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  syntax-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get repository code
+        uses: actions/checkout@v6
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Install backend packages
+        working-directory: backend
+        run: npm install
+      - name: Check JavaScript syntax
+        working-directory: backend
+        run: npm run check
