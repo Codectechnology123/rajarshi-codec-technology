@@ -9,7 +9,7 @@ const frontendPath = path.join(__dirname, '../../frontend');
 app.disable('x-powered-by');
 app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"], styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'], fontSrc: ["'self'", 'https://fonts.gstatic.com', 'data:'], imgSrc: ["'self'", 'data:', 'https:'], scriptSrc: ["'self'"], connectSrc: ["'self'"], objectSrc: ["'none'"], upgradeInsecureRequests: null } } }));
 const allowedOrigin = process.env.CLIENT_ORIGIN;
-app.use(cors({ origin: (origin, callback) => { if (!origin || !allowedOrigin || origin === allowedOrigin) return callback(null, true); return callback(new Error('Origin not allowed by CORS')); } }));
+app.use(cors({ origin: (origin, callback) => { if (!origin) return callback(null, true); if (allowedOrigin && origin === allowedOrigin) return callback(null, true); return callback(null, false); } }));
 app.use(express.json({ limit: '20kb' }));
 app.use(express.urlencoded({ extended: false, limit: '20kb' }));
 const contactLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 5, standardHeaders: 'draft-7', legacyHeaders: false, message: { message: 'Too many contact attempts. Please try again later.' } });
