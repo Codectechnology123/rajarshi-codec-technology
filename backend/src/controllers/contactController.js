@@ -1,6 +1,6 @@
 const ContactMessage = require('../models/ContactMessage');
 const { sendContactNotification } = require('../services/emailService');
-const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 exports.createContact = async (req, res, next) => {
  try {
   const name = typeof req.body.name === 'string' ? req.body.name.trim() : '';
