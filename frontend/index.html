@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1020"><meta name="description" content="Rajarshi Dash — aspiring full-stack developer portfolio.">
+<title>Rajarshi Dash | Full-Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css"><script src="/js/app.js" defer></script>
+</head>
+<body>
+<header class="site-header"><nav class="nav container" aria-label="Main navigation">
+<a class="brand" href="#home"><span class="brand-mark">R</span> rajarshi<span class="brand-dot">.</span></a>
+<button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+<div class="nav-links" id="nav-links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a class="nav-cta" href="#contact">Let's talk ↗</a></div>
+</nav></header>
+<main>
+<section class="hero section container" id="home"><div class="hero-copy">
+<p class="eyebrow"><span class="status-dot"></span><span id="availability">Open to learning opportunities</span></p><p class="hero-kicker">HELLO, I'M</p>
+<h1 id="hero-name">Rajarshi Dash<span class="accent">.</span></h1><h2 id="hero-role">Aspiring Full-Stack Developer</h2>
+<p class="hero-intro" id="hero-intro">I enjoy building useful, accessible web experiences and learning how complete applications work, from the interface to the database.</p>
+<div class="hero-actions"><a class="button button-primary" href="#projects">Explore my work ↘</a><a class="text-link" href="#contact">Get in touch ↗</a></div>
+<div class="hero-meta"><span>⌖ <span id="hero-location">India</span></span><span class="meta-divider"></span><span>Building one project at a time</span></div>
+</div><div class="hero-art" aria-label="Decorative developer illustration"><div class="art-glow"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+<div class="code-card"><div class="code-top"><span></span><span></span><span></span><small>developer.js</small></div><div class="code-lines">
+<p><span class="line-number">01</span><span class="code-purple">const</span> developer = {</p><p><span class="line-number">02</span>&nbsp; name: <span class="code-green">'Rajarshi'</span>,</p><p><span class="line-number">03</span>&nbsp; focus: <span class="code-green">'Web Dev'</span>,</p><p><span class="line-number">04</span>&nbsp; curious: <span class="code-orange">true</span>,</p><p><span class="line-number">05</span>&nbsp; learning: <span class="code-purple">['full', 'stack']</span></p><p><span class="line-number">06</span>};</p><p class="code-comment"><span class="line-number">07</span>// turning ideas into reality</p></div></div>
+<div class="floating-chip chip-top">✳ Clean code</div><div class="floating-chip chip-bottom">⌘ Always learning</div><div class="art-spark spark-one">✦</div><div class="art-spark spark-two">✧</div></div>
+<a class="scroll-cue" href="#about"><span class="scroll-line"></span> SCROLL TO DISCOVER</a></section>
+<section class="section about-section" id="about"><div class="container two-column"><div><p class="section-label">01 / ABOUT ME</p><h2 class="section-title">Curious mind.<br><span class="muted-title">Builder at heart.</span></h2></div><div class="about-copy"><p id="about-text">I am building my skills in web development by creating practical projects, learning step by step, and focusing on clean, reliable code.</p><p>My current focus is learning how frontend interfaces, backend services, APIs, and databases fit together to create a complete product.</p><a class="text-link" href="#contact">Have a project in mind? ↗</a></div></div></section>
+<section class="section container" id="skills"><div class="section-heading"><div><p class="section-label">02 / MY TOOLKIT</p><h2 class="section-title">Skills I'm <span class="muted-title">building.</span></h2></div><p class="section-side-note">A growing toolkit for turning ideas into working web experiences.</p></div><div class="skills-grid" id="skills-grid"><div class="loading-state">Loading skills…</div></div></section>
+<section class="section projects-section" id="projects"><div class="container"><div class="section-heading"><div><p class="section-label">03 / SELECTED WORK</p><h2 class="section-title">Projects & <span class="muted-title">experiments.</span></h2></div><p class="section-side-note">A place for practical work, experiments, and things learned along the way.</p></div><div class="projects-grid" id="projects-grid"><div class="loading-state">Loading projects…</div></div></div></section>
+<section class="section contact-section" id="contact"><div class="container contact-layout"><div class="contact-copy"><p class="section-label">04 / GET IN TOUCH</p><h2 class="section-title">Let's make<br><span class="muted-title">something useful.</span></h2><p>Have a question, an idea, or an opportunity to share? Send a message using the form.</p><a class="contact-email" id="contact-email" href="mailto:hello@example.com">hello@example.com ↗</a></div>
+<form class="contact-form" id="contact-form"><div class="form-row"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" minlength="2" maxlength="80" required placeholder="What should I call you?"></div><div class="form-row"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="you@example.com"></div><div class="form-row"><label for="subject">Subject <span>(optional)</span></label><input id="subject" name="subject" maxlength="120" placeholder="What's this about?"></div><div class="form-row"><label for="message">Your message</label><textarea id="message" name="message" rows="4" minlength="10" maxlength="3000" required placeholder="Tell me a little about it…"></textarea></div><button class="button button-primary submit-button" type="submit"><span id="submit-label">Send message</span><span>↗</span></button><p class="form-status" id="form-status" role="status" aria-live="polite"></p></form></div></section>
+</main><footer class="site-footer"><div class="container footer-inner"><a class="brand" href="#home"><span class="brand-mark">R</span> rajarshi<span class="brand-dot">.</span></a><p>Designed & built with curiosity. <span id="footer-year"></span></p><a class="back-top" href="#home">Back to top ↑</a></div></footer>
+</body></html>
